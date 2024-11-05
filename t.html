@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Texto ao Clicar</title>
+    <style>
+        #texto {
+            display: none; /* O texto fica escondido inicialmente */
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="mostrarTexto()">Clique para ver o texto</button>
+
+    <p id="texto">Este é o texto que apareceu ao clicar no botão!</p>
+
+    <script>
+        function mostrarTexto() {
+            var texto = document.getElementById("texto");
+            if (texto.style.display === "none") {
+                texto.style.display = "block"; // Mostra o texto
+            } else {
+                texto.style.display = "none"; // Esconde o texto
+            }
+        }
+    </script>
+
+</body>
+</html>
